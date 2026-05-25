@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Global Digital Clock</h1>
+            <p class="subtitle">Current time in different time zones</p>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="timezoneInput" placeholder="Add timezone (e.g., America/New_York)" list="timezones">
+            <datalist id="timezones">
+                <option value="America/New_York"></option>
+                <option value="Europe/London"></option>
+                <option value="Asia/Tokyo"></option>
+                <option value="Australia/Sydney"></option>
+                <option value="UTC"></option>
+            </datalist>
+            <button id="addBtn" class="btn btn-primary">Add Zone</button>
+        </div>
+
+        <div class="quick-zones">
+            <h3>Quick Add:</h3>
+            <div class="zone-buttons">
+                <button class="quick-btn" data-zone="America/New_York">NYC</button>
+                <button class="quick-btn" data-zone="Europe/London">London</button>
+                <button class="quick-btn" data-zone="Asia/Tokyo">Tokyo</button>
+                <button class="quick-btn" data-zone="Australia/Sydney">Sydney</button>
+                <button class="quick-btn" data-zone="UTC">UTC</button>
+            </div>
+        </div>
+
+        <div id="clocksContainer" class="clocks-container"></div>
+
+        <div class="actions">
+            <button id="clearAll" class="btn btn-danger">Clear All Zones</button>
+        </div>
+    </div>
+    <script src="clock-script.js"></script>
+</body>
+</html>
